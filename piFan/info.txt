@@ -4,6 +4,8 @@ You need to run the commands in setup.sh to get it all setup, if you are not usi
 
 You will also need to activate secure shell (ssh) on the Pi (Google if needed but it has to do with raspi-config)
 
+You can use ifconfig to get the ip address of the devices
+
 piFan.py runs on the Pi with the SenseHat
 runFan.py runs on the other Pi(s) running the fan
 
