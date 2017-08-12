@@ -1,0 +1,7 @@
+This project uses the SenseHat to measure temp and humidity to trigger a fan connected to another Pi using an ExplorerHat
+
+You need to run the commands in setup.sh to get it all setup, if you are not using a webpage there is no need for the last two commands. 
+
+piFan.py runs on the Pi with the SenseHat
+runFan.py runs on the other Pi(s) running the fan
+
