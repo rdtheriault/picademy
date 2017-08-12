@@ -38,14 +38,14 @@ for x in range (0,2000):
         elif (humidity > highHum):
             s.clear(b)
             msg = "<span style='color:blue'>Humidity</span> is high"
-        subprocess.call("sshpass -p raspberry ssh pi@192.168.221.188 'python3 /home/pi/picademymotor2.py'", shell=True)#change ip as needed
+        subprocess.call("sshpass -p raspberry ssh pi@192.168.221.188 'python3 /home/pi/runFan.py'", shell=True)#change ip as needed
     else:
         s.clear(g)
     print(humidity)
     print(temp)
     
     #this section creates a webpage every iteration, you will need to change the url and give pi ownership of www
-    file = "/var/www/html/index.php"; 
+    file = "/var/www/html/index.html"; 
     f = open(file, 'w+');
     Data = "<html><head><meta http-equiv='refresh' content='5; URL=http://192.168.210.240'></head><body><h1>"+msg+"</h1><br><br><h2>Temp: "+str(temp)+" Celsius</h2><br><br><h2>Humidity: "+str(humidity)+"%</h2></body></html>"; 
     f.write(Data);
